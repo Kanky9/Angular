@@ -1,0 +1,25 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="row m-3 text-start">
+        
+        <!--
+            llamamos al comp form-calculadora, y con event binding conectamos el evento encargado de guardar las operaciones matemáticas.
+        -->
+        <app-form-calculadora
+           (resultadoFinal)="procesarResultado($event)" 
+        ></app-form-calculadora>
+
+        <!--
+            Llamamos a resultado, y con property binding conectamos los resultados para que se envíen y muestren.
+        -->
+        <app-resultado
+            [resultadoHijo]="resultadoPadre"
+        ></app-resultado>
+    </div>
+
+</div>

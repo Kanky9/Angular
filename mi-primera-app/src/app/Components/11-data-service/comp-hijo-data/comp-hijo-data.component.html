@@ -1,0 +1,18 @@
+<!--
+    Asi no se debe generar el componente hijo, solo debe estar en la carpeta de Componentes, pero lo hice aca para que quede ordenado.
+-->
+<div class="row">
+    <div class="col">
+        <div class="d-flex">
+            <p>{{indice + 1}} ) {{persona.nombre}} {{persona.apellido}}</p>
+
+            <button
+                type="submit"
+                class="btn btn-info "
+                (click)="mostrarIndice()"
+                >
+                Mostrar índice
+            </button>
+        </div>
+    </div>
+</div>

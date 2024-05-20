@@ -1,0 +1,56 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="cont">
+        <div class="col">
+            <h3>{{titulo}}</h3>
+        </div>
+        <hr/>
+        <!--
+            Creamos un formulario con inputs para ingresar datos, los cuales usando ngModel los llevamos a sus respectivas variables.
+        -->
+        <form class="form mb-3">
+            <div class="form-group col-md-3 mb-2">
+                <label for="nombre">Nombre</label>
+                <input 
+                    type="text" name="nombre" id="nombre" 
+                    placeholder="Nombre"
+                    class="form-control" 
+                    [(ngModel)]="nombreInput"
+                />
+            </div>
+
+            <div class="form-group col-md-3 mb-2">
+                <label for="apellido">Apellido</label>
+                <input 
+                    type="text" name="apellido" id="apellido" placeholder="Apellido"
+                    class="form-control" 
+                    [(ngModel)]="apellidoInput"
+                />
+            </div>
+
+            <button 
+                type="submit" class="btn btn-primary" 
+                (click)="agregarPersona()"
+                >
+                Agregar
+            </button>
+        </form>
+        
+        <hr/>
+        <!-- 
+            Las variables se pueden llamar igual pero para identificarlas le cambie los nombres.
+            llamamos al componente hijo y con estas propiedades le enviamos los datos
+        -->
+        <app-comp-hijo
+            *ngFor="let personaElemento of personas; let i = index"
+            [persona] = "personaElemento"
+            [indice] = "i"
+        ></app-comp-hijo>
+    </div>
+    
+</div>

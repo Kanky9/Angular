@@ -1,0 +1,31 @@
+<!--
+            Creamos un formulario con inputs para ingresar datos, los cuales usando ngModel los llevamos a sus respectivas variables.
+        -->
+        <form class="form mb-3">
+            <div class="form-group col-md-3 mb-2">
+                <label for="nombre">Nombre</label>
+                <input 
+                    type="text" name="nombre" id="nombre" 
+                    placeholder="Nombre"
+                    class="form-control"
+                    #nombreInput
+                />
+            </div>
+
+            <div class="form-group col-md-3 mb-2">
+                <label for="apellido">Apellido</label>
+                <input 
+                    type="text" name="apellido" id="apellido" 
+                    placeholder="Apellido"
+                    class="form-control" 
+                    #apellidoInput
+                />
+            </div>
+
+            <button 
+                type="submit" class="btn btn-primary" 
+                (click)="onAgregarPersona()"
+                >
+                Agregar
+            </button>
+        </form>

@@ -1,0 +1,33 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="cont">
+        <div class="col">
+            <h3>{{titulo}}</h3>
+        </div>
+        <hr/>
+        
+        <!-- 
+            llamamos al componente hijo
+        -->
+        <app-form-data
+            
+        ></app-form-data>
+        
+        <hr/>
+        <!-- 
+            Las variables se pueden llamar igual pero para identificarlas le cambie los nombres.
+            llamamos al componente hijo y con estas propiedades le enviamos los datos
+        -->
+        <app-comp-hijo-data
+            *ngFor="let personaElemento of personas; let i = index"
+            [persona] = "personaElemento"
+            [indice] = "i"
+        ></app-comp-hijo-data>
+    </div>
+    
+</div>

@@ -1,0 +1,24 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="row m-3 text-start">
+        <div class="col">
+            <label>Titulo persona</label>
+            <input 
+                type="text"
+                class="form-control"
+                [(ngModel)]="titulo"
+            />
+            <p>{{titulo}}</p>
+        </div>
+    </div>
+
+</div>
+
+<!--
+    Usando Two Way Binding solo con poner la variable que necesitamos cambiar es suficiente para que lo haga, luego con interpolación se muestra el resulado. 
+-->

@@ -1,0 +1,38 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="row m-3 text-start">
+        <div class="col d-flex flex-column">
+            <h1 class="m-2">Listado de personas</h1>
+
+            <button class="btn btn-primary m-2" 
+                [disabled]="deshabilitar"
+                (click)='agregarPersona()'    
+                >Agregar persona
+            </button>
+            <p *ngIf="mostrar">{{mensaje}} con el titulo de {{titulo}}</p>
+
+            <!-- Otra manera de usar el ngIf es: Lo que hace es llamar a sinPersona en el ng-template, para decirle que es lo que debe mostrar en el else. -->
+            <p *ngIf="mostrar; else sinPersona ">{{mensaje}} con el titulo de {{titulo}}</p>
+            <ng-template #sinPersona>
+                <p>No se ha agregado ninguna persona (Usando else)</p>
+            </ng-template>
+
+            <label>Titulo persona</label>
+            <input 
+                type="text"
+                class="form-control"
+                (input)="modificarTitulo($event)"
+            />
+        </div>
+    </div>
+
+</div>
+
+<!--
+    Con el *ngIf, en este caso se muestra el mensaje si la var mostrar es true, si no se oculta, y con interpolación se muestra.
+-->

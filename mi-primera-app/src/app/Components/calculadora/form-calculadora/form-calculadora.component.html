@@ -1,0 +1,34 @@
+<form class="mb-3">
+    <div class="form-group">
+        <input
+            type="number"
+            class="form-control mb-3"
+            placeholder="numero 1"
+            name="num1"
+            [(ngModel)]="num1"
+        />
+    </div>
+
+    <div class="form-group">
+        <input
+        type="number"
+        class="form-control mb-3"
+        placeholder="numero 2"
+        name="num2"
+        [(ngModel)]="num2"
+        />
+    </div>
+
+    <button type="submit" class="btn btn-primary m-1" (click)="Sumar()">
+        Sumar
+    </button>
+    <button type="submit" class="btn btn-primary m-1" (click)="Restar()">
+        Restar
+    </button>
+    <button type="submit" class="btn btn-primary m-1" (click)="Multiplicar()">
+        Multiplicar
+    </button>
+    <button type="submit" class="btn btn-primary m-1" (click)="Dividir()">
+        Dividir
+    </button>
+</form>

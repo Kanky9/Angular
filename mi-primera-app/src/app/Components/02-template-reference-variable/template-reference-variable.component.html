@@ -1,0 +1,18 @@
+<div class="container flex-column d-flex justify-content-center text-center">
+    
+    <div class="cont m-2">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="m-3" (keyup)="0">
+        <label for="">Repetidor: </label>
+        <input #entrada type="text" />
+        {{entrada.value}}
+    </div>
+
+</div>
+
+<!-- 
+    captura el evento con la interpolacion, para luego mostrarlo
+-->

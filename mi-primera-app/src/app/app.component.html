@@ -1,0 +1,45 @@
+
+<router-outlet></router-outlet> 
+
+
+<!-- Notas: 
+  *Crear app Angular: ng new nombre_app
+
+  *Instalar dependencias: npm i | npm install 
+
+  *Arrancar aplicación: ng serve --o (Hay más formas pero yo lo hago con esta, ya que o (open) hace que ya abra la aplicación).  
+
+  *Crear componente: ng g c nombre_Componente (g: generate, c: component). 
+
+  *Crear servicio: ng g s nombre_Servicio (g: generate, s: service).
+
+  *--skip-tests true: con esto al crear un componente o servicio no nos crea los test.
+
+  *app-routing.module.ts: en este archivo le asignamos un nombre a los componentes para luego conectarlos a otros mediante routing. El nombre se pone seguido de path (Puede ser cualquiera) y luego en component el nombre real del componente
+
+  *Interpolación: Con {{valor}} lo que podemos hacer es llamar variables que estén en el ts. 
+
+  *Template Reference Variable: Con #Nombre, se escribe en el template, es un nombre que le asignamos, y puede hacer referencia a algun metodo y luego llamarlo por interpolacion o en el ts.
+
+  *Property Binding:se usa con [Nombre],  asigna valores a las propiedades de los elementos en html.
+
+  *Event Binding: se usa con (nombre) en el html, escucha los eventos de los componentes html y los captura (clicks, teclas, etc).
+
+  *Two Way Binding: se usa con [(ngModel)]="nombre" es una forma de entreconectar los componentes, Hay que importar FormsModule en app.module.ts, es una mescla entre [property] y (event) binding. 
+
+  *NgIf: se usa con *ngIf="nombre", es una directiva q nos permite modificar la información que mostramos, en este caso con una condición. 
+
+  *NgFor: se usa con *ngFor="nombre", nos va a permitir iterar varios elementos
+
+  *Property Binding entre componentes: Se usa para que un componente padre intercambie datos con un comp hijo, o viceversa, con @input() manda información del comp padre al hijo, @ouput() manda información del comp hijo al padre.
+
+  *Event Binding entre componentes: es lo mismo que en el property, solo que con eventos.
+
+  *Local Reference:se usa con #Nombre envia informacion desde la plantilla al componente.
+
+  *View Child: es un decorador el cual sirve para recuperar información de algun elemento entre los componentes.
+
+  *Dependency inyector: es un concepto por el cual se llama a una dependencia, servicio o elemento externo por medio del constructor.
+
+  *QueryParams: se usa con [queryParams]="nombre" en html, y sirve para pasar parametros o intercambiarlos para realizar algo.
+-->

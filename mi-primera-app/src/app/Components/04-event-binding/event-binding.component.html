@@ -1,0 +1,36 @@
+<div class="container flex-column d-flex justify-content-center ">
+    
+    <div class="cont m-2 text-center">
+        <a routerLink="/inicio" class="btn btn-primary">Inicio</a>
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="row m-3 text-start">
+        <div class="col">
+            <h1>Listado de personas</h1>
+
+            <button class="btn btn-primary" 
+                [disabled]="deshabilitar"
+                (click)='agregarPersona()'    
+                >Agregar persona
+            </button>
+            <p>{{mensaje}}</p>
+
+
+            <label>Titulo persona</label>
+            <input 
+                type="text"
+                class="form-control"
+                (input)="modificarTitulo($event)"
+            />
+            <p>{{titulo}}</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- 
+    Al presionar el boton se llama al metodo agregarPersona(), y luego con interpolacion se muestra el mensaje.
+
+    Usamos el método (input) para hacer referencia y llamar al metodo modificarTitulo, luego con interpolacion se muestra cuando el título cambia. 
+-->
